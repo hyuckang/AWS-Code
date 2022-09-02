@@ -29,3 +29,8 @@ def list_gp2_volumes(aws_profile: str) -> list:
 
     except ModuleNotFoundError as module_err:
         raise ImportError(module_err) from module_err
+
+if __name__ == '__main__':
+    aws_profile = input('Input aws profile : ')
+    gp2_volume_ids = list_gp2_volumes(aws_profile)
+    print(gp2_volume_ids)

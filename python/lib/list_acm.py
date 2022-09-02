@@ -30,3 +30,7 @@ def list_acm(aws_profile: str) -> list:
 
     except ModuleNotFoundError as module_err:
         raise ImportError(module_err) from module_err
+
+if __name__ == '__main__':
+    aws_profile = input('Input aws profile : ')
+    print(list_acm(aws_profile))

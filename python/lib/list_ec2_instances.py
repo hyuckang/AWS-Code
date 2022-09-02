@@ -37,3 +37,7 @@ def list_ec2_instances(aws_profile: str) -> list:
         list_ec2.append(desc)
 
     return list_ec2
+
+if __name__ == '__main__':
+    aws_profile = input('Input aws profile : ')
+    print(list_ec2_instances(aws_profile))

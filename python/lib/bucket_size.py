@@ -30,3 +30,8 @@ def bucket_size(aws_profile: str, bucket_name: str) -> int:
 
     except ModuleNotFoundError as module_err:
         raise ImportError(module_err) from module_err
+
+if __name__ == '__main__':
+    aws_profile = input('Input aws profile : ')
+    bucekt_name = input('Input bucket name : ')
+    print(f'{bucekt_name} size : {bucket_size(aws_profile, bucekt_name)} GiB')
